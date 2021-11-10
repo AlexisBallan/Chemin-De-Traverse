@@ -234,7 +234,6 @@ namespace CodeMonkey.Utils {
         public static Vector3 GetMouseWorldPosition() {
             Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
             vec.z = 0f;
-            Debug.Log(vec);
             return vec;
         }
         public static Vector3 GetMouseWorldPositionWithZ() {
@@ -244,9 +243,7 @@ namespace CodeMonkey.Utils {
             return GetMouseWorldPositionWithZ(Input.mousePosition, worldCamera);
         }
         public static Vector3 GetMouseWorldPositionWithZ(Vector3 screenPosition, Camera worldCamera) {
-            Debug.Log(screenPosition + " " + worldCamera);
             Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
-            
             return worldPosition;
         }
         
